@@ -103,7 +103,7 @@
         { k: "objective", l: "Objective / professional summary", t: "textarea" },
         { k: "photo", l: "Profile photo", t: "image", dir: "assets" },
         { k: "initials", l: "Monogram (used when there is no photo)", t: "text", half: 1 },
-        { k: "resumePdf", l: "PDF file path", t: "text", half: 1, mono: 1 },
+        { k: "resumePdf", l: "Downloadable PDF résumé", t: "file", dir: "assets", accept: ".pdf,application/pdf" },
         { k: "facts", l: "Quick facts", t: "objlist", title: "label", fields: [
             { k: "label", l: "Label", t: "text", half: 1 },
             { k: "value", l: "Value", t: "text", half: 1 }
@@ -239,20 +239,29 @@
   function imageField(obj, f) {
     var prev = h("div", { class: "prev" });
     var pathInput = h("input", { type: "text", class: "mono", placeholder: "no image" });
-    var file = h("input", { type: "file", accept: "image/*", style: "display:none" });
-    var note = h("div", { class: "hint" }, ["JPG or PNG. Resized automatically before upload."]);
+    var isImg = f.t !== "file";
+    var file = h("input", { type: "file", accept: f.accept || "image/*", style: "display:none" });
+    var note = h("div", { class: "hint" }, [isImg
+      ? "JPG or PNG. Resized automatically before upload."
+      : "PDF, up to 4 MB. Replaces the file behind the Download button."]);
 
     function drawPrev() {
       prev.innerHTML = "";
       var v = obj[f.k];
-      if (v) prev.appendChild(h("img", { src: /^https?:/.test(v) ? v : "../" + v, alt: "" }));
-      else prev.appendChild(h("span", {}, ["none"]));
+      if (v && isImg) {
+        prev.appendChild(h("img", { src: /^https?:/.test(v) ? v : "../" + v, alt: "" }));
+      } else if (v) {
+        prev.appendChild(h("span", { style: "padding:6px;text-align:center;word-break:break-all;line-height:1.35" },
+          [v.split("/").pop()]));
+      } else {
+        prev.appendChild(h("span", {}, ["none"]));
+      }
       pathInput.value = v || "";
     }
 
     pathInput.oninput = function () { obj[f.k] = pathInput.value.trim(); setDirty(true); drawPrev(); };
 
-    var upBtn = h("button", { class: "btn btn-sm", onclick: function () { file.click(); } }, ["Upload image"]);
+    var upBtn = h("button", { class: "btn btn-sm", onclick: function () { file.click(); } }, [isImg ? "Upload image" : "Upload PDF"]);
     var rmBtn = h("button", { class: "btn btn-sm btn-danger",
       onclick: function () { obj[f.k] = ""; setDirty(true); drawPrev(); } }, ["Remove"]);
 
@@ -260,7 +269,7 @@
       var fl = file.files && file.files[0];
       if (!fl) return;
       note.textContent = "Processing…";
-      shrink(fl).then(function (res) {
+      (isImg ? shrink(fl) : rawUpload(fl)).then(function (res) {
         var name = (fl.name.replace(/\.[^.]+$/, "") || "image")
           .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40) || "image";
         var path = f.dir + "/" + Date.now() + "-" + name + "." + res.ext;
@@ -288,6 +297,18 @@
         ])
       ])
     ]);
+  }
+
+  function rawUpload(fileObj) {
+    return new Promise(function (resolve, reject) {
+      if (fileObj.size > 4 * 1024 * 1024) return reject(new Error("file is larger than 4 MB"));
+      var fr = new FileReader();
+      fr.onload = function () {
+        resolve({ b64: bufToB64(fr.result), ext: (fileObj.name.split(".").pop() || "bin").toLowerCase() });
+      };
+      fr.onerror = function () { reject(new Error("could not read the file")); };
+      fr.readAsArrayBuffer(fileObj);
+    });
   }
 
   function shrink(fileObj) {
@@ -343,7 +364,7 @@
       var node;
       if (f.t === "list") node = listField(obj, f);
       else if (f.t === "objlist") node = objListField(obj, f);
-      else if (f.t === "image") node = imageField(obj, f);
+      else if (f.t === "image" || f.t === "file") node = imageField(obj, f);
       else node = textField(obj, f);
 
       if (f.half) buf.push(node);
