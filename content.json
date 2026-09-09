@@ -9,10 +9,22 @@
     "photo": "",
     "resumePdf": "assets/Azizbek-Juraev-Resume.pdf",
     "facts": [
-      { "label": "Nationality", "value": "Uzbekistan" },
-      { "label": "Based in", "value": "Incheon, South Korea" },
-      { "label": "Visa status", "value": "D-2 Student" },
-      { "label": "Date of birth", "value": "11 October 2005" }
+      {
+        "label": "Nationality",
+        "value": "Uzbekistan"
+      },
+      {
+        "label": "Based in",
+        "value": "Incheon, South Korea"
+      },
+      {
+        "label": "Visa status",
+        "value": "D-2 Student"
+      },
+      {
+        "label": "Date of birth",
+        "value": "11 October 2005"
+      }
     ]
   },
   "contact": {
@@ -74,27 +86,107 @@
     }
   ],
   "certifications": [
-    { "title": "TOPIK Level 4 (한국어능력시험 4급)", "issuer": "NIIED, Republic of Korea", "date": "May 2026", "image": "" },
-    { "title": "IELTS — English Proficiency Certificate", "issuer": "British Council / IDP", "date": "February 2023", "image": "" },
-    { "title": "Driver's License", "issuer": "Republic of Korea", "date": "January 2025", "image": "" },
-    { "title": "Ibrat & Wiki Certification", "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan", "date": "March 2023", "image": "" },
-    { "title": "Skills Camp Certification", "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan", "date": "August 2023", "image": "" }
+    {
+      "title": "TOPIK Level 4 (한국어능력시험 4급)",
+      "issuer": "NIIED, Republic of Korea",
+      "date": "May 2026",
+      "image": ""
+    },
+    {
+      "title": "IELTS — English Proficiency Certificate",
+      "issuer": "British Council / IDP",
+      "date": "February 2023",
+      "image": ""
+    },
+    {
+      "title": "Driver's License",
+      "issuer": "Republic of Korea",
+      "date": "January 2025",
+      "image": ""
+    },
+    {
+      "title": "Ibrat & Wiki Certification",
+      "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan",
+      "date": "March 2023",
+      "image": ""
+    },
+    {
+      "title": "Skills Camp Certification",
+      "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan",
+      "date": "August 2023",
+      "image": ""
+    }
   ],
   "skills": [
-    { "group": "Business & Operations", "items": ["Marketing fundamentals", "Operations management", "Inventory management", "Customer service"] },
-    { "group": "Interpersonal", "items": ["Problem-solving", "Conflict resolution", "Team coordination", "Leadership"] },
-    { "group": "Tools", "items": ["Microsoft Excel", "Microsoft PowerPoint", "Microsoft Word", "Video editing"] }
+    {
+      "group": "Business & Operations",
+      "items": [
+        "Marketing fundamentals",
+        "Operations management",
+        "Inventory management",
+        "Customer service"
+      ]
+    },
+    {
+      "group": "Interpersonal",
+      "items": [
+        "Problem-solving",
+        "Conflict resolution",
+        "Team coordination",
+        "Leadership"
+      ]
+    },
+    {
+      "group": "Tools",
+      "items": [
+        "Microsoft Excel",
+        "Microsoft PowerPoint",
+        "Microsoft Word",
+        "Video editing"
+      ]
+    }
   ],
   "languages": [
-    { "name": "Uzbek", "level": "Native / bilingual proficiency", "value": 100 },
-    { "name": "English", "level": "Professional working proficiency · IELTS", "value": 80 },
-    { "name": "Korean", "level": "Intermediate · TOPIK Level 4", "value": 65 },
-    { "name": "Russian", "level": "Limited working proficiency", "value": 40 }
+    {
+      "name": "Uzbek",
+      "level": "Native / bilingual proficiency",
+      "value": 100
+    },
+    {
+      "name": "English",
+      "level": "Professional working proficiency · IELTS",
+      "value": 80
+    },
+    {
+      "name": "Korean",
+      "level": "Intermediate · TOPIK Level 4",
+      "value": 65
+    },
+    {
+      "name": "Russian",
+      "level": "Limited working proficiency",
+      "value": 40
+    }
   ],
   "scholarships": [
-    { "title": "Global Scholarship — Inha University", "issuer": "Inha University, South Korea", "period": "2023 — 2026", "note": "Full-ride scholarship covering all semesters." },
-    { "title": "Byeokdam Scholarship", "issuer": "South Korea", "period": "2025", "note": "" },
-    { "title": "Learning Program Scholarship (awarded twice)", "issuer": "South Korea", "period": "2025", "note": "" }
+    {
+      "title": "Global Scholarship — Inha University",
+      "issuer": "Inha University, South Korea",
+      "period": "2023 — 2026",
+      "note": "Full-ride scholarship covering all semesters."
+    },
+    {
+      "title": "Byeokdam Scholarship",
+      "issuer": "South Korea",
+      "period": "2025",
+      "note": ""
+    },
+    {
+      "title": "Learning Program Scholarship (awarded twice)",
+      "issuer": "South Korea",
+      "period": "2025",
+      "note": ""
+    }
   ],
   "activities": [
     {
@@ -102,21 +194,28 @@
       "org": "Inha University",
       "location": "Incheon, South Korea",
       "period": "July 2025",
-      "bullets": ["Solved local social issues as part of a team over the course of a month."]
+      "bullets": [
+        "Solved local social issues as part of a team over the course of a month."
+      ]
     },
     {
       "title": "Inha Global Tutoring Program",
       "org": "Inha University",
       "location": "Incheon, South Korea",
       "period": "April — June 2025",
-      "bullets": ["Taught Korean grammar to first-year students to help them improve their university results."]
+      "bullets": [
+        "Taught Korean grammar to first-year students to help them improve their university results."
+      ]
     },
     {
       "title": "Briquette Delivery — Community Service",
       "org": "Local community initiative",
       "location": "Incheon, South Korea",
       "period": "November 2023",
-      "bullets": ["Participated in a community service initiative to support local needs."]
+      "bullets": [
+        "Participated in a community service initiative to support local needs."
+      ]
     }
-  ]
+  ],
+  "updatedAt": "2026-09-09T18:13:04.692705+00:00"
 }

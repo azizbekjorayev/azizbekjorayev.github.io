@@ -184,8 +184,10 @@
       navHtml += '<a href="#' + s.id + '"><span class="bar"></span>' + esc(s.label) + "</a>";
     });
 
-    html += "<footer><span>© " + new Date().getFullYear() + " " + esc(p.name || "") + "</span>" +
-      '<span>Last updated ' + esc(data.updatedAt ? new Date(data.updatedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }) : "—") + "</span></footer>";
+    var updated = data.updatedAt
+      ? '<span>Last updated ' + esc(new Date(data.updatedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })) + "</span>"
+      : "";
+    html += "<footer><span>© " + new Date().getFullYear() + " " + esc(p.name || "") + "</span>" + updated + "</footer>";
 
     $("#main").innerHTML = html;
     $("#nav").innerHTML = navHtml;
