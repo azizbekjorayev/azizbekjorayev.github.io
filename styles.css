@@ -16,8 +16,11 @@
   --accent-ink: #ffffff;
   --accent-soft:#f4e7e0;
 
-  --serif: "Instrument Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --serif: "Instrument Serif", "Iowan Old Style", Georgia, "Times New Roman",
+           "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", serif;
+  /* Korean / CJK fallbacks so 한국어 text never renders as tofu boxes. */
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+          "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", "Nanum Gothic", sans-serif;
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
 
   --r: 12px;
@@ -81,14 +84,10 @@ a { color: inherit; text-decoration: none; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
 /* --- Reveal on scroll ------------------------------------- */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
-}
-.reveal.in { opacity: 1; transform: none; }
+/* No entrance animation and nothing conditionally hidden: the resume must
+   render completely on first paint, for every browser, for print-to-PDF and
+   for link-preview and screenshot tools that never scroll. */
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
   * { scroll-behavior: auto !important; }
 }
 
@@ -475,7 +474,7 @@ footer a:hover { color: var(--ink); }
   .entry { break-inside: avoid; grid-template-columns: 120px 1fr; padding: 10px 0; }
   .cert { break-inside: avoid; }
   .cert .thumb { display: none; }
-  .reveal { opacity: 1 !important; transform: none !important; }
+
   footer { display: none; }
   a[href^="http"]::after { content: ""; }
 }

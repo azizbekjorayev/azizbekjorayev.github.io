@@ -27,7 +27,7 @@
   /* ---------- section renderers ---------- */
 
   function entry(when, title, orgLine, note, bullets) {
-    var h = '<article class="entry reveal">';
+    var h = '<article class="entry">';
     h += '<div class="when">' + esc(when) + "</div>";
     h += "<div><h3>" + esc(title) + "</h3>";
     if (has(orgLine)) h += '<p class="org">' + orgLine + "</p>";
@@ -60,7 +60,7 @@
     certifications: function (items) {
       return '<div class="certs">' + items.map(function (c, i) {
         var img = has(c.image);
-        var h = '<div class="cert reveal' + (img ? " has-img" : "") + '"' +
+        var h = '<div class="cert' + (img ? " has-img" : "") + '"' +
           (img ? ' data-img="' + esc(c.image) + '" data-cap="' + esc(c.title) + '" tabindex="0" role="button" aria-label="View certificate: ' + esc(c.title) + '"' : "") + ">";
         h += '<div class="thumb">';
         h += img
@@ -96,10 +96,10 @@
       var v = Math.max(0, Math.min(100, Number(l.value) || 0));
       return '<div class="lang"><div class="top"><span class="name">' + esc(l.name) +
         '</span><span class="lvl">' + esc(l.level) + '</span></div>' +
-        '<div class="track"><span class="fill" data-w="' + v + '"></span></div></div>';
+        '<div class="track"><span class="fill" style="width:' + v + '%"></span></div></div>';
     }).join("");
 
-    return '<div class="split reveal"><div>' +
+    return '<div class="split"><div>' +
       '<h3 style="margin:0 0 18px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">Competencies</h3>' + left +
       '</div><div>' +
       '<h3 style="margin:0 0 18px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">Languages</h3>' + right +
@@ -116,7 +116,7 @@
       { k: "Location", v: c.address, href: "", i: "location" }
     ].filter(function (r) { return has(r.v); });
 
-    return '<div class="contact-grid reveal">' + rows.map(function (r) {
+    return '<div class="contact-grid">' + rows.map(function (r) {
       var inner = svg(r.i) + '<div><div class="k">' + esc(r.k) + '</div><div class="v">' + esc(r.v) + "</div></div>";
       return r.href
         ? '<a class="contact-item" href="' + esc(r.href) + '"' + (/^https/.test(r.href) ? ' target="_blank" rel="noopener"' : "") + ">" + inner + "</a>"
@@ -150,16 +150,16 @@
 
     var html = "";
 
-    if (has(p.tagline)) html += '<p class="lede reveal">' + esc(p.tagline) + "</p>";
+    if (has(p.tagline)) html += '<p class="lede">' + esc(p.tagline) + "</p>";
     var facts = arr(p.facts).filter(function (f) { return has(f.value); });
     if (facts.length) {
-      html += '<dl class="facts reveal">' + facts.map(function (f) {
+      html += '<dl class="facts">' + facts.map(function (f) {
         return '<div class="fact"><dt>' + esc(f.label) + "</dt><dd>" + esc(f.value) + "</dd></div>";
       }).join("") + "</dl>";
     }
 
     var plan = [
-      { id: "profile", label: "Profile", body: has(p.objective) ? '<p class="reveal" style="max-width:66ch;font-size:15.5px;color:var(--ink-2);margin:0">' + esc(p.objective) + "</p>" : "", count: "" },
+      { id: "profile", label: "Profile", body: has(p.objective) ? '<p style="max-width:66ch;font-size:15.5px;color:var(--ink-2);margin:0">' + esc(p.objective) + "</p>" : "", count: "" },
       { id: "experience", label: "Experience", key: "experience" },
       { id: "education", label: "Education", key: "education" },
       { id: "certifications", label: "Certifications", key: "certifications" },
@@ -196,25 +196,10 @@
   /* ---------- behaviour ---------- */
 
   function wire() {
-    // reveal on scroll
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.04 });
-    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+    wireRest();
+  }
 
-    // language bars
-    var lio = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.style.width = e.target.dataset.w + "%";
-          lio.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll(".lang .fill").forEach(function (el) { lio.observe(el); });
-
+  function wireRest() {
     // scroll-spy
     var links = [].slice.call(document.querySelectorAll("#nav a"));
     var secs = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
