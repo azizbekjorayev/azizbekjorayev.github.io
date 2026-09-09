@@ -12,8 +12,10 @@ A static, globally hosted résumé with a private admin panel.
 
 The site is plain static files, so there is no server to attack and nothing to pay for.
 The admin panel writes changes straight back to `content.json` in this repository
-through the GitHub API. The host (GitHub Pages / Netlify) redeploys automatically,
-usually within a minute.
+through the GitHub API. The host redeploys automatically, usually within a minute.
+
+Config for both hosts is committed: `vercel.json` (Vercel) and `netlify.toml`
+(Netlify). Neither needs a build step — publish the repository root as-is.
 
 The access token is stored **only in the admin's browser**. A visitor who opens
 `/admin/` without a token sees a login screen and can change nothing.
