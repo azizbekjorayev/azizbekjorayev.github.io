@@ -1,0 +1,122 @@
+{
+  "profile": {
+    "name": "Azizbek Juraev",
+    "headline": "International Business & Trade",
+    "subheadline": "Inha University · Incheon, South Korea",
+    "tagline": "Business student with a marketing and operations foundation, three countries of hands-on work experience, and four working languages.",
+    "objective": "Motivated Business student at Inha University with a strong foundation in marketing and operations management. Experienced in customer service, team coordination, and leadership. Demonstrated ability to drive efficiency and contribute to business growth. Proficient in Microsoft Office and video editing tools.",
+    "initials": "AJ",
+    "photo": "",
+    "resumePdf": "assets/Azizbek-Juraev-Resume.pdf",
+    "facts": [
+      { "label": "Nationality", "value": "Uzbekistan" },
+      { "label": "Based in", "value": "Incheon, South Korea" },
+      { "label": "Visa status", "value": "D-2 Student" },
+      { "label": "Date of birth", "value": "11 October 2005" }
+    ]
+  },
+  "contact": {
+    "email": "azizbekjorayev05@gmail.com",
+    "phone": "+82 10-4491-5583",
+    "telegram": "azizbekh_djurayev",
+    "linkedin": "linkedin.com/in/azizbekjuraev",
+    "kakao": "Azizbekh",
+    "address": "99-5, Hannaru-ro 463beon-gil, Michuhol-gu, Incheon, South Korea"
+  },
+  "experience": [
+    {
+      "role": "Logistics Assistant",
+      "org": "Edeka Logistics Center",
+      "location": "Landsberg, Germany",
+      "period": "June 2026 — August 2026",
+      "bullets": [
+        "Used AI-powered voice picking systems to locate, assemble and fulfil daily warehouse orders.",
+        "Adapted to a dynamic international work environment and collaborated effectively during a 3-month cultural exchange program."
+      ]
+    },
+    {
+      "role": "English Instructor, Winter Camp",
+      "org": "Laksamana College of Business",
+      "location": "Brunei Darussalam",
+      "period": "January 2026 — February 2026",
+      "bullets": [
+        "Taught English to children aged 10–15 through interactive lessons and activities.",
+        "Assisted in camp management and daily program coordination."
+      ]
+    },
+    {
+      "role": "Front Desk Staff",
+      "org": "MJ Stay Hotel",
+      "location": "Seoul, South Korea",
+      "period": "May 2025 — December 2025",
+      "bullets": [
+        "Assisted guests with check-in and check-out and provided local information in English and Korean.",
+        "Handled reservations, phone calls and guest requests to ensure a smooth customer experience."
+      ]
+    },
+    {
+      "role": "Kitchen Crew Member",
+      "org": "Pipit Restaurant",
+      "location": "Suwon, South Korea",
+      "period": "January 2024 — January 2025",
+      "bullets": [
+        "Managed inventory and ensured efficient kitchen workflows."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's Degree in International Business and Trade",
+      "school": "Inha University",
+      "location": "Incheon, South Korea",
+      "period": "August 2023 — Present",
+      "note": "GPA 4.39 / 4.5"
+    }
+  ],
+  "certifications": [
+    { "title": "TOPIK Level 4 (한국어능력시험 4급)", "issuer": "NIIED, Republic of Korea", "date": "May 2026", "image": "" },
+    { "title": "IELTS — English Proficiency Certificate", "issuer": "British Council / IDP", "date": "February 2023", "image": "" },
+    { "title": "Driver's License", "issuer": "Republic of Korea", "date": "January 2025", "image": "" },
+    { "title": "Ibrat & Wiki Certification", "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan", "date": "March 2023", "image": "" },
+    { "title": "Skills Camp Certification", "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan", "date": "August 2023", "image": "" }
+  ],
+  "skills": [
+    { "group": "Business & Operations", "items": ["Marketing fundamentals", "Operations management", "Inventory management", "Customer service"] },
+    { "group": "Interpersonal", "items": ["Problem-solving", "Conflict resolution", "Team coordination", "Leadership"] },
+    { "group": "Tools", "items": ["Microsoft Excel", "Microsoft PowerPoint", "Microsoft Word", "Video editing"] }
+  ],
+  "languages": [
+    { "name": "Uzbek", "level": "Native / bilingual proficiency", "value": 100 },
+    { "name": "English", "level": "Professional working proficiency · IELTS", "value": 80 },
+    { "name": "Korean", "level": "Intermediate · TOPIK Level 4", "value": 65 },
+    { "name": "Russian", "level": "Limited working proficiency", "value": 40 }
+  ],
+  "scholarships": [
+    { "title": "Global Scholarship — Inha University", "issuer": "Inha University, South Korea", "period": "2023 — 2026", "note": "Full-ride scholarship covering all semesters." },
+    { "title": "Byeokdam Scholarship", "issuer": "South Korea", "period": "2025", "note": "" },
+    { "title": "Learning Program Scholarship (awarded twice)", "issuer": "South Korea", "period": "2025", "note": "" }
+  ],
+  "activities": [
+    {
+      "title": "Inha Creative Changer",
+      "org": "Inha University",
+      "location": "Incheon, South Korea",
+      "period": "July 2025",
+      "bullets": ["Solved local social issues as part of a team over the course of a month."]
+    },
+    {
+      "title": "Inha Global Tutoring Program",
+      "org": "Inha University",
+      "location": "Incheon, South Korea",
+      "period": "April — June 2025",
+      "bullets": ["Taught Korean grammar to first-year students to help them improve their university results."]
+    },
+    {
+      "title": "Briquette Delivery — Community Service",
+      "org": "Local community initiative",
+      "location": "Incheon, South Korea",
+      "period": "November 2023",
+      "bullets": ["Participated in a community service initiative to support local needs."]
+    }
+  ]
+}

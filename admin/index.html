@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Résumé Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23e08a5f'/><text x='50' y='70' font-size='56' font-family='monospace' fill='%2316191c' text-anchor='middle'>%E2%9A%99</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <h1>Résumé Admin</h1>
+    <p class="sub">Sign in with a GitHub token to edit the live site.</p>
+
+    <label class="f">
+      <span>Repository</span>
+      <input type="text" id="in-repo" class="mono" placeholder="username/azizbek-resume" autocomplete="off" spellcheck="false">
+    </label>
+
+    <label class="f">
+      <span>Branch</span>
+      <input type="text" id="in-branch" class="mono" value="main" autocomplete="off" spellcheck="false">
+    </label>
+
+    <label class="f">
+      <span>GitHub access token</span>
+      <input type="password" id="in-token" class="mono" placeholder="github_pat_… or ghp_…" autocomplete="off" spellcheck="false">
+    </label>
+
+    <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);margin:4px 0 18px;cursor:pointer">
+      <input type="checkbox" id="in-remember" checked style="width:auto;accent-color:var(--accent)">
+      Stay signed in on this device
+    </label>
+
+    <button class="btn btn-primary btn-wide" id="btn-login">Sign in</button>
+    <div class="msg" id="gate-msg"></div>
+
+    <p class="help">
+      Create a <b>fine-grained personal access token</b> at
+      <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens</a>
+      — limit it to this one repository and grant <b>Contents: Read and write</b>.
+      The token stays in this browser only; it is never sent anywhere except to GitHub.
+    </p>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div class="app" id="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="t">Résumé Admin</div>
+      <div class="r" id="brand-repo"></div>
+    </div>
+    <nav class="snav" id="snav"></nav>
+    <div class="sfoot">
+      <a class="btn btn-sm" id="btn-view" href="../index.html" target="_blank" rel="noopener">View site ↗</a>
+      <button class="btn btn-sm btn-danger" id="btn-logout">Sign out</button>
+    </div>
+  </aside>
+
+  <div class="content">
+    <div class="topbar">
+      <h2 id="pane-title">Profile</h2>
+      <span class="dirty" id="dirty">● unsaved changes</span>
+    </div>
+    <div class="pane" id="pane"></div>
+  </div>
+
+  <div class="savebar">
+    <span class="status" id="status"></span>
+    <button class="btn" id="btn-reload">Discard &amp; reload</button>
+    <button class="btn btn-primary" id="btn-save">Publish changes</button>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
