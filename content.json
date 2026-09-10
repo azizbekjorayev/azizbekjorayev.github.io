@@ -65,15 +65,6 @@
         "Assisted guests with check-in and check-out and provided local information in English and Korean.",
         "Handled reservations, phone calls and guest requests to ensure a smooth customer experience."
       ]
-    },
-    {
-      "role": "Kitchen Crew Member",
-      "org": "Pipit Restaurant",
-      "location": "Suwon, South Korea",
-      "period": "January 2024 — January 2025",
-      "bullets": [
-        "Managed inventory and ensured efficient kitchen workflows."
-      ]
     }
   ],
   "education": [
@@ -217,5 +208,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-10T07:43:38.668Z"
+  "updatedAt": "2026-09-10T07:44:48.708Z"
 }
