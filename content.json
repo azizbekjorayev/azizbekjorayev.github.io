@@ -115,7 +115,8 @@
         "Marketing fundamentals",
         "Operations management",
         "Inventory management",
-        "Customer service"
+        "Customer service",
+        "Sales"
       ]
     },
     {
@@ -133,7 +134,8 @@
         "Microsoft Excel",
         "Microsoft PowerPoint",
         "Microsoft Word",
-        "Video editing"
+        "Video editing",
+        "Python"
       ]
     }
   ],
@@ -208,5 +210,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-10T07:52:26.262Z"
+  "updatedAt": "2026-09-10T07:54:08.115Z"
 }
