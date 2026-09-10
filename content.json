@@ -84,10 +84,34 @@
       "image": "certificates/1789029436367-img-9340.jpg"
     },
     {
+      "title": "KCB IIEP Camp Participation Certificate",
+      "issuer": "Kensington College of Business",
+      "date": "February 2026",
+      "image": ""
+    },
+    {
       "title": "IELTS — English Proficiency Certificate",
       "issuer": "British Council / IDP",
       "date": "February 2023",
-      "image": "IELTS"
+      "image": ""
+    },
+    {
+      "title": "Byeokdam Scholarship Certificate",
+      "issuer": "BOMI Engineering & Construction (Seoul, South Korea)",
+      "date": "2025",
+      "image": ""
+    },
+    {
+      "title": "Inha Global Tutoring Program Certificate Inha Global Tutoring Program Certificate",
+      "issuer": "Inha University",
+      "date": "2025",
+      "image": ""
+    },
+    {
+      "title": "Inha Creative Changer Certificate Inha Creative Changer Certificate",
+      "issuer": "Inha University & Incheon Municipal Government",
+      "date": "2025",
+      "image": ""
     },
     {
       "title": "Driver's License",
@@ -105,30 +129,6 @@
       "title": "Skills Camp Certification",
       "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan",
       "date": "August 2023",
-      "image": ""
-    },
-    {
-      "title": "Byeokdam Scholarship Certificate",
-      "issuer": "BOMI Engineering & Construction (Seoul, South Korea)",
-      "date": "2025",
-      "image": ""
-    },
-    {
-      "title": "Inha Creative Changer Certificate Inha Creative Changer Certificate",
-      "issuer": "Inha University & Incheon Municipal Government",
-      "date": "2025",
-      "image": ""
-    },
-    {
-      "title": "Inha Global Tutoring Program Certificate Inha Global Tutoring Program Certificate",
-      "issuer": "Inha University",
-      "date": "2025",
-      "image": ""
-    },
-    {
-      "title": "KCB IIEP Camp Participation Certificate",
-      "issuer": "Kensington College of Business",
-      "date": "February 2026",
       "image": ""
     }
   ],
@@ -234,5 +234,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-10T08:40:56.268Z"
+  "updatedAt": "2026-09-10T08:42:52.697Z"
 }
