@@ -90,26 +90,26 @@
       "image": ""
     },
     {
-      "title": "IELTS — English Proficiency Certificate",
-      "issuer": "British Council / IDP",
-      "date": "February 2023",
-      "image": ""
-    },
-    {
       "title": "Byeokdam Scholarship Certificate",
       "issuer": "BOMI Engineering & Construction (Seoul, South Korea)",
       "date": "2025",
       "image": ""
     },
     {
-      "title": "Inha Global Tutoring Program Certificate Inha Global Tutoring Program Certificate",
-      "issuer": "Inha University",
-      "date": "2025",
+      "title": "IELTS — English Proficiency Certificate",
+      "issuer": "British Council / IDP",
+      "date": "February 2023",
       "image": ""
     },
     {
       "title": "Inha Creative Changer Certificate Inha Creative Changer Certificate",
       "issuer": "Inha University & Incheon Municipal Government",
+      "date": "2025",
+      "image": ""
+    },
+    {
+      "title": "Inha Global Tutoring Program Certificate Inha Global Tutoring Program Certificate",
+      "issuer": "Inha University",
       "date": "2025",
       "image": ""
     },
@@ -234,5 +234,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-10T08:43:05.803Z"
+  "updatedAt": "2026-09-10T08:44:09.568Z"
 }
