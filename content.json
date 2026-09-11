@@ -108,28 +108,16 @@
       "image": "certificates/1789030471247-img-4325.jpg"
     },
     {
-      "title": "Inha Global Tutoring Program Certificate Inha Global Tutoring Program Certificate",
+      "title": "Inha Global Tutoring Program Certificate",
       "issuer": "Inha University",
-      "date": "2025",
-      "image": ""
+      "date": "August 22, 2025",
+      "image": "certificates/1789114685681-img-4328.jpg"
     },
     {
       "title": "Driver's License",
       "issuer": "Republic of Korea",
       "date": "January 2025",
       "image": "certificates/1789027569328-img-4322.jpg"
-    },
-    {
-      "title": "Ibrat & Wiki Certification",
-      "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan",
-      "date": "March 2023",
-      "image": ""
-    },
-    {
-      "title": "Skills Camp Certification",
-      "issuer": "Youth Affairs Agency, Tashkent, Uzbekistan",
-      "date": "August 2023",
-      "image": ""
     }
   ],
   "skills": [
@@ -234,5 +222,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-11T08:16:23.023Z"
+  "updatedAt": "2026-09-11T08:20:03.766Z"
 }
